@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["nodejs_24", "chromium"]
+
+[phases.install]
+cmds = ["npm install"]
+
+[phases.build]
+cmds = ["npx puppeteer browsers install chrome"]
+
+[start]
+cmd = "node index.js"
